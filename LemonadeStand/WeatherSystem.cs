@@ -15,15 +15,13 @@ namespace LemonadeStand
         public string predictedForecast;
 
         //Constructor (Spawner)
-        public WeatherSystem(string condition, int Temperature, string predictedForecast) 
+        public WeatherSystem(string condition, int Temperature, string predictedForecast List<string> weatherCondition) 
         {
             this.Condition = condition;
             this.Temperature = Temperature;
+            this.weatherCondition = weatherCondition;
             this.predictedForecast = predictedForecast;
-
-
-
-
         }
+        public void 
     }
 }

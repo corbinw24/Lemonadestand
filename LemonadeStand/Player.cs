@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,5 +24,13 @@ namespace LemonadeStand
 
         // member methods (CAN DO)
 
-    }
-}
+        public void BuyLemons(Store store)
+        {
+            int lemonsToPurchase = UserInterface.GetNumberOfItems("lemons");
+            double transactionAmount = CalculateTransactionAmount(lemonsToPurchase, pricePerLemon);
+            if (player.wallet.Money >= transactionAmount)
+            {
+                player.wallet.PayMoneyForItems(transactionAmount);
+                player.inventory.AddLemonsToInventory(lemonsToPurchase);
+            }
+        };
