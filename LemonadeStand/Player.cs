@@ -27,10 +27,12 @@ namespace LemonadeStand
         public void BuyLemons(Store store)
         {
             int lemonsToPurchase = UserInterface.GetNumberOfItems("lemons");
-            double transactionAmount = CalculateTransactionAmount(lemonsToPurchase, pricePerLemon);
-            if (player.wallet.Money >= transactionAmount)
-            {
-                player.wallet.PayMoneyForItems(transactionAmount);
-                player.inventory.AddLemonsToInventory(lemonsToPurchase);
-            }
-        };
+            store.SellLemons(this);
+        }
+        public void Makelemonade(Recipe recipe)
+        {
+            Console.WriteLine("Put items togther in a pitcher to make lemonade");
+        }
+
+    }
+}

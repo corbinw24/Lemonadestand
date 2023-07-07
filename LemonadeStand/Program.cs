@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            //Member Variables (CAN DO)
             List<string> weatherConditions = new List<string>
             {
                 "Rainy",

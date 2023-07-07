@@ -15,7 +15,7 @@ namespace LemonadeStand
         public double price;
 
 
-        // constructor (SPAWNER)
+        //Constructor SPAWNER
         public Recipe()
         {
             numberOfLemons = 2;
